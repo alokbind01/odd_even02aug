@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title> Find Odd Even Number </title>
+    
+    <style>
+        *{
+            font-size: 50px;font-family:'Times New Roman', Times, serif;
+        }
+        body{
+            background-color: aqua;
+        }
+        h1{
+            background-color: black;color:red;width: 50%;border-radius: 5px;
+        }
+        #subbtn{
+            background-color: black;color: green;
+        }
+       
+    </style>
+    <script>
+        function find()
+        {
+            event.preventDefault();
+            let num = document.getElementById("num");
+            let ans = document.getElementById("ans")
+            if(num.value == ""){
+                alert("you have written nothing");
+                ans.innerHTML = "";
+                num.focus();
+                return;
+            }
+            let n = parseInt(num.value);
+            if( n % 2 == 0)
+                msg = "its even";
+            else
+                msg =" its odd ";
+            ans.innerHTML = msg;
+            
+            
+        }
+
+    </script>
+    </head>
+
+    <body>
+        <center>
+            <h1>Even  and Odd Finder</h1>
+            <form onsubmit="find()">
+            <input type="number" id="num" placeholder="enter the integer"> <br><br>
+            <input type="submit" value="Find" id="subbtn">
+            </form>
+        <h2 id="ans"></h2>
+        </center>
+    </body>
+</html>
